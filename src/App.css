@@ -1,0 +1,97 @@
+* {box-sizing: border-box;}
+
+body {
+  background-color: #f4f4f4;
+  font-family: Arial;
+}
+
+.app {
+  width: 500px;
+  margin: 50px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+h1 {
+  text-align: center;
+}
+
+form {
+  display: flex;
+  gap: 10px;
+}
+
+input[type='text'] {
+  flex: 1;
+  padding: 10px;
+}
+
+button {
+  padding: 10px;
+  cursor: pointer;
+  background: tomato;
+  border:none;
+  border-radius: 5px;
+  color:#fff;
+}
+
+.todo-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* 텍스트 영역 고정 */
+.todo-text {
+  flex: 1;
+  min-width: 0;
+}
+
+/* 수정 input 고정 */
+.todo-edit-input {
+  flex: 1;
+  padding: 8px;
+}
+
+/* 버튼 영역 고정 */
+.todo-buttons {
+  display: flex;
+  gap: 5px;
+  flex-shrink: 0;
+}
+
+.app h1 {color: tomato;}
+form input {border:1px solid rgb(249, 182, 170);}
+
+input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 체크됐을 때 */
+input[type="checkbox"]:checked {
+  background-color: tomato;
+  border-color: tomato;
+}
+
+/* 체크 표시 (V) */
+input[type="checkbox"]:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+input:focus {border:1px solid tomato;outline: none;}
+
+.cr {border:1px solid tomato;background: none;color:#131313;}
